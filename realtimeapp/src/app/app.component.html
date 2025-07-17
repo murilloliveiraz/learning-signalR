@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h1>{{ title }}</h1>
+  <h2>Real-time Data from Kafka via SignalR</h2>
+
+  <div class="message-container">
+    <h3>Received Messages:</h3>
+    <ul id="messagesList">
+      <li *ngFor="let message of receivedMessages">
+        {{ message }}
+      </li>
+    </ul>
+    <p *ngIf="receivedMessages.length === 0">Waiting for data...</p>
+  </div>
+</div>
